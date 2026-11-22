@@ -39,12 +39,11 @@
   p { margin: 0 0 1.5rem; }
   p:last-of-type { margin-bottom: 1.5rem; }
   a.cta {
-    flex-shrink: 0;
+    align-self: flex-start;
     background: var(--fg);
     color: var(--bg);
     text-decoration: none;
-    font-size: 0.9rem;
-    padding: 0.3rem 0.8rem;
+    padding: 0.35rem 0.85rem;
     border-radius: 22px;
   }
   a.cta:hover, a.cta:focus-visible { opacity: 0.8; }
@@ -81,18 +80,16 @@
   .legal footer p { margin: 0; }
   .legal footer a { color: inherit; text-decoration: none; }
   .legal footer a:hover, .legal footer a:focus-visible { color: var(--fg); }
-  .home { color: var(--fg); text-underline-offset: 3px; }
 </style>
 </head>
 <body>
 <main>
   <header class="top">
     <a class="brand" href="/"><svg viewBox="0 0 32 19" aria-hidden="true"><rect x="0.75" y="0.75" width="30.5" height="17.5" rx="8.75" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="9.5" r="5" fill="currentColor"/></svg>OffMode</a>
-    <a class="cta" href="mailto:kim@offmode.co?subject=Gratis%20snak&amp;body=Hej%20Kim%2C%0A%0AJeg%20bruger%20for%20meget%20tid%20p%C3%A5%20%E2%80%A6%0A%0A">Frigør din tid</a>
   </header>
   <h1>Siden findes ikke.</h1>
   <p>Linket virker ikke længere, eller der har sneget sig en stavefejl ind.</p>
-  <p><a class="home" href="/">Til forsiden</a></p>
+  <a class="cta" href="/">Til forsiden</a>
   <footer>
     <p><span>OffMode · CVR 41929820</span> · <a href="mailto:kim@offmode.co">kim@offmode.co</a></p>
     <p><a href="/privatliv/">Cookies og privatliv</a></p>
