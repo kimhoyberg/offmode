@@ -50,7 +50,7 @@
   p { margin: 0 0 1.5rem; }
   p:last-of-type { margin-bottom: 1.5rem; }
   a.cta {
-    align-self: flex-start;
+    flex-shrink: 0;
     background: var(--fg);
     color: var(--bg);
     text-decoration: none;
@@ -71,14 +71,13 @@
   }
   .projects a:hover, .projects a:focus-visible { color: var(--fg); }
   .projects svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-  .note { margin-top: 1.5rem; font-size: 0.8rem; line-height: 1.7; color: color-mix(in srgb, var(--fg) 60%, transparent); }
-  section { margin-top: 5rem; }
   footer { margin-top: auto; padding-top: 6rem; font-size: 0.8rem; line-height: 1.7; color: color-mix(in srgb, var(--fg) 60%, transparent); }
   footer p { margin: 0; }
   footer span, footer a { white-space: nowrap; }
   footer a { color: inherit; text-decoration: none; }
   footer a:hover, footer a:focus-visible { color: var(--fg); }
-  .brand { align-self: flex-start; display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fg); text-decoration: none; font-weight: 400; margin: 0 0 5rem; }
+  .top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 0 0 5rem; }
+  .brand { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fg); text-decoration: none; font-weight: 400; }
   .brand svg { width: 1.6rem; height: 0.95rem; flex-shrink: 0; overflow: visible; }
   .legal p { margin: 0 0 1rem; }
   .legal p:last-of-type { margin-bottom: 1rem; }
@@ -94,21 +93,15 @@
 </head>
 <body>
 <main>
-  <a class="brand" href="./"><svg viewBox="0 0 32 19" aria-hidden="true"><rect x="0.75" y="0.75" width="30.5" height="17.5" rx="8.75" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="9.5" r="5" fill="currentColor"/></svg>OffMode</a>
-  <h1>Flere timer i ugen. Hver uge.</h1>
-  <p>Jeg hedder Kim og bygger ting, der gør hverdagen lettere for lokale virksomheder i Midt- og Vestjylland.</p>
-  <p>Et tilbud, der skriver sig selv. Annoncer, der lægger sig selv&nbsp;op. En hjemmeside, du ikke skal tænke på.</p>
-  <p>Lad os tage en gratis snak og finde dine største tidsrøvere.</p>
-  <a class="cta" href="mailto:kim@offmode.co?subject=Gratis%20snak&amp;body=Hej%20Kim%2C%0A%0AJeg%20bruger%20for%20meget%20tid%20p%C3%A5%20%E2%80%A6%0A%0A">Frigør din tid</a>
-  <div class="note">Fast pris fra 5.000 kr. ekskl. moms<br>Ingen effekt, ingen regning</div>
-  <section>
-    <h2>Tidligere projekter</h2>
-    <ul class="projects">
-      <li><a href="https://byensentreprenor.dk" target="_blank" rel="noopener"><span>Fra opstart til online på bare tre uger</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-      <li><a href="https://github.com/offmodeco/gog-feed" target="_blank" rel="noopener"><span>Automatisk annoncering</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-      <li><a href="https://viborg-caravancenter.dk" target="_blank" rel="noopener"><span>Ny professionel hjemmeside</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-    </ul>
-  </section>
+  <header class="top">
+    <a class="brand" href="./"><svg viewBox="0 0 32 19" aria-hidden="true"><rect x="0.75" y="0.75" width="30.5" height="17.5" rx="8.75" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="9.5" r="5" fill="currentColor"/></svg>OffMode</a>
+    <a class="cta" href="mailto:kim@offmode.co?subject=Gratis%20snak&amp;body=Hej%20Kim%2C%0A%0AJeg%20bruger%20for%20meget%20tid%20p%C3%A5%20%E2%80%A6%0A%0A">Frigør din tid</a>
+  </header>
+  <ul class="projects">
+    <li><a href="https://byensentreprenor.dk" target="_blank" rel="noopener"><span>Fra opstart til online på bare tre uger</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
+    <li><a href="https://github.com/offmodeco/gog-feed" target="_blank" rel="noopener"><span>Automatisk annoncering</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
+    <li><a href="https://viborg-caravancenter.dk" target="_blank" rel="noopener"><span>Ny professionel hjemmeside</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
+  </ul>
   <footer>
     <p><span>OffMode · CVR 41929820</span> · <a href="mailto:kim@offmode.co">kim@offmode.co</a></p>
     <p><a href="privatliv/">Cookies og privatliv</a></p>
