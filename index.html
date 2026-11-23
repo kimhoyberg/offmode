@@ -61,18 +61,25 @@
   }
   a.cta:hover, a.cta:focus-visible { opacity: 0.8; }
   h2 { font-size: 1.1rem; font-weight: 600; margin: 0 0 1rem; }
-  .projects { list-style: none; margin: 0; padding: 0; }
-  .projects li { border-bottom: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); }
-  .projects a {
+  .projects details { border-bottom: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); }
+  .projects summary {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
     padding: 0.9rem 0;
     color: color-mix(in srgb, var(--fg) 60%, transparent);
-    text-decoration: none;
+    cursor: pointer;
+    list-style: none;
   }
-  .projects a:hover, .projects a:focus-visible { color: var(--fg); }
-  .projects svg { width: 1rem; height: 1rem; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+  .projects summary::-webkit-details-marker { display: none; }
+  .projects summary:hover, .projects summary:focus-visible, .projects details[open] summary { color: var(--fg); }
+  .projects summary svg { width: 1rem; height: 1rem; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; transition: transform 0.2s ease; }
+  .projects details[open] summary svg { transform: rotate(45deg); }
+  .projects .body { padding: 0 2rem 1.25rem 0; }
+  .projects .body p { margin: 0 0 0.75rem; }
+  .projects .link { font-size: 0.8rem; color: color-mix(in srgb, var(--fg) 60%, transparent); text-decoration: none; }
+  .projects .link:hover, .projects .link:focus-visible { color: var(--fg); }
   footer { margin-top: auto; padding-top: 6rem; font-size: 0.8rem; line-height: 1.7; color: color-mix(in srgb, var(--fg) 60%, transparent); }
   footer p { margin: 0; }
   footer span, footer a { white-space: nowrap; }
@@ -104,12 +111,36 @@
   <div class="note">Fast pris fra 5.000 kr. ekskl. moms</div>
   <section>
     <h2>Projekter</h2>
-    <ul class="projects">
-      <li><a href="https://tageraimitjob.dk" target="_blank" rel="noopener"><span>Weekendprojekt: Tager AI mit job?</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-      <li><a href="https://byensentreprenor.dk" target="_blank" rel="noopener"><span>Fra opstart til online på bare tre uger</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-      <li><a href="https://github.com/offmodeco/gog-feed" target="_blank" rel="noopener"><span>Automatisk annoncering</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-      <li><a href="https://viborg-caravancenter.dk" target="_blank" rel="noopener"><span>Ny professionel hjemmeside</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M5.5 5H11v5.5"/></svg></a></li>
-    </ul>
+    <div class="projects">
+      <details>
+        <summary><span>Weekendprojekt: Tager AI mit job?</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></summary>
+        <div class="body">
+          <p>Et weekendprojekt, der holder øje med, hvilken effekt AI har på det danske arbejdsmarked.</p>
+          <a class="link" href="https://tageraimitjob.dk" target="_blank" rel="noopener">tageraimitjob.dk ↗</a>
+        </div>
+      </details>
+      <details>
+        <summary><span>Fra opstart til online på bare tre uger</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></summary>
+        <div class="body">
+          <p>En ny hjemmeside til Byens Entreprenør, fra første snak til færdig side på bare tre uger.</p>
+          <a class="link" href="https://byensentreprenor.dk" target="_blank" rel="noopener">byensentreprenor.dk ↗</a>
+        </div>
+      </details>
+      <details>
+        <summary><span>Automatisk annoncering</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></summary>
+        <div class="body">
+          <p>Viborg Caravan Centers campingvogne kommer automatisk på GulogGratis. Hver time hentes varelageret fra hjemmesiden og sendes videre, så ingen skal oprette annoncer i hånden.</p>
+          <a class="link" href="https://github.com/kimhoyberg/gog-feed" target="_blank" rel="noopener">Se koden på GitHub ↗</a>
+        </div>
+      </details>
+      <details>
+        <summary><span>Ny professionel hjemmeside</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3 8h10"/></svg></summary>
+        <div class="body">
+          <p>En ny hjemmeside til Viborg Caravan Center, hvor varelageret er let at holde opdateret. Den er også fundamentet for den automatiske annoncering.</p>
+          <a class="link" href="https://viborg-caravancenter.dk" target="_blank" rel="noopener">viborg-caravancenter.dk ↗</a>
+        </div>
+      </details>
+    </div>
   </section>
   <footer>
     <p><span>OffMode · CVR 41929820</span> · <a href="mailto:kim@offmode.co">kim@offmode.co</a></p>
