@@ -67,15 +67,16 @@
     align-items: center;
     gap: 1rem;
     padding: 0.9rem 0;
-    color: color-mix(in srgb, var(--fg) 60%, transparent);
+    color: var(--fg);
     cursor: pointer;
     list-style: none;
   }
   .projects summary::-webkit-details-marker { display: none; }
-  .projects summary:hover, .projects summary:focus-visible, .projects details[open] summary { color: var(--fg); }
+  .projects details:not([open]) summary:hover, .projects details:not([open]) summary:focus-visible { opacity: 0.6; }
   .projects summary svg { width: 1rem; height: 1rem; flex-shrink: 0; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; transition: transform 0.2s ease; }
   .projects details[open] summary svg { transform: rotate(45deg); }
-  .projects .body { padding: 0 2rem 1.25rem 0; }
+  .projects .body { padding: 0 2rem 1.25rem 0; color: color-mix(in srgb, var(--fg) 60%, transparent); }
+  .projects .body a { color: inherit; }
   .projects .body p { margin: 0 0 0.75rem; }
   .projects .link { font-size: 0.8rem; color: color-mix(in srgb, var(--fg) 60%, transparent); text-decoration: none; }
   .projects .link:hover, .projects .link:focus-visible { color: var(--fg); }
