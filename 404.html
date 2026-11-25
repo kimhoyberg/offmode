@@ -67,8 +67,9 @@
   footer span, footer a, .note span { white-space: nowrap; }
   footer a { color: inherit; text-decoration: none; }
   footer a:hover, footer a:focus-visible { color: var(--fg); }
-  .top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin: 0 0 5rem; }
-  .brand { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--fg); text-decoration: none; font-weight: 400; }
+  .top { display: flex; margin: 0 0 max(2rem, calc(12vh - 3.45rem)); }
+  .brand { display: inline-flex; color: var(--fg); }
+  .brand:hover, .brand:focus-visible { opacity: 0.6; }
   .brand svg { width: 1.6rem; height: 0.95rem; flex-shrink: 0; overflow: visible; }
   .legal p { margin: 0 0 1rem; }
   .legal p:last-of-type { margin-bottom: 1rem; }
@@ -85,7 +86,7 @@
 <body>
 <main>
   <header class="top">
-    <a class="brand" href="/"><svg viewBox="0 0 32 19" aria-hidden="true"><rect x="0.75" y="0.75" width="30.5" height="17.5" rx="8.75" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="9.5" r="5" fill="currentColor"/></svg>OffMode</a>
+    <a class="brand" href="/" aria-label="OffMode – til forsiden"><svg viewBox="0 0 32 19" aria-hidden="true"><rect x="0.75" y="0.75" width="30.5" height="17.5" rx="8.75" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="9.5" cy="9.5" r="5" fill="currentColor"/></svg></a>
   </header>
   <h1>Siden findes ikke.</h1>
   <p>Linket virker ikke længere, eller der har sneget sig en stavefejl ind.</p>
